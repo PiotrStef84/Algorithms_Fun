@@ -9,7 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class MiscController {
 
     @RequestMapping(value="dev", method = RequestMethod.GET)
-    public String goToIndexPage() {
+    public String goToForDevelopersPage() {
+
+        return "developers";
+    }
+
+    @RequestMapping(value="about", method = RequestMethod.GET)
+    public String goToAboutPage() {
 
         return "developers";
     }
