@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Steps page</title>
+  <link rel="stylesheet" href="" th:href="@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" href="" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Algorithms 0.2</span>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div>
+      <p>This is an example of solution for the Bin Packing Problem with 8 items</p>
+      <p>Items to be sorted are: 5, 7, 5, 2, 4, 2, 5, 1, 6</p>
+      <p>Bin capacity is set to 10</p>
+
+    </div>
+    <h1>Steps for the algorithm are</h1>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>Step</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="step, iterStat : ${steps}">
+        <td th:text="${step}">Step</td>
+      </tr>
+      </tbody>
+
+    </table>
+    <div>
+      <a class="btn btn-secondary btn-lg" href="bin" role="button">Return</a>
+    </div>
+  </div>
+
+
+  <script src="" th:src="@{js/myjs.js}"></script>
+  <script src="" th:src="@{js/bootstrap.min.js}"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Travelling Salesman Problem</title>
+  <link rel="stylesheet" href="" th:href="@{/css/mystyle.css}">
+
+</head>
+
+<body>
+
+<header>
+
+  <h1 class="heading">Travelling Salesman Problem</h1>
+
+  <div id="menu" class="fas fa-bars"></div>
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="index">home</a></li>
+      <li><a href="tsp">Travelling Salesman</a></li>
+      <li><a href="bin">Bin Packing</a></li>
+      <li><a href="bin">For Developers</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<section class="service">
+
+  <div class="box-container">
+
+    <di><img src="" class="" th:src="@{image/tsp_car.webp}"></di>
+
+    <div class="box">
+      <i class="fas fa-tools"></i>
+      <h3>Nearest Neighbors</h3>
+      <p>This algorithm compares distance between the current city and the remaining ones, picks the one that is the closest,
+        marks it as visited and as current and then adds it to the solution.
+        The process is repeated until all the cities are visited</p>
+      <a class="btn btn-primary btn-lg" href="nearest" role="button">Nearest Neighbor</a>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-code"></i>
+      <h3>Hill Climbing</h3>
+      <p>Hill Climbing is an iterative algorithm that starts with an initial solution and then tries to find better one by making small incremental changes.
+        The algorithm will pick two cities at random and swap them with each other.</p>
+      <a class="btn btn-secondary btn-lg" href="hill" role="button">Hill Climbing</a>
+    </div>
+
+
+
+  </div>
+
+</section>
+
+  <div>
+    <a class="btn btn-primary btn-lg" href="index" role="button">Return</a>
+  </div>
+
+
+  <script src="" th:src="@{js/myjs.js}"></script>
+  <script src="" th:src="@{js/bootstrap.min.js}"></script>
+</body>
+
+</html>

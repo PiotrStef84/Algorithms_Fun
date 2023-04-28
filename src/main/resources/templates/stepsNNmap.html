@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Steps page</title>
+  <link rel="stylesheet" href="" th:href="@{/css/bootstrap.min.css}">
+  <link rel="stylesheet" href="" th:href="@{/css/mystyle.css}">
+</head>
+<body>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1">Algorithms 0.2</span>
+  </div>
+</nav>
+<div class="container">
+
+  <div>
+    <p>This is an example of solution for the Traveling Salesman Problem with 10 cities</p>
+    <p>Cities in this example are: Boston, Houston, Austin, San Francisco, Denver, Los Angeles, Chicago, New York, Dallas, Seattle</p>
+    <p>Starting City is Boston</p>
+  </div>
+  <div id="map"></div>
+
+  <h1>Steps for the algorithm are</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Step</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="step : ${steps}">
+      <td th:text="${step}">Step</td>
+    </tr>
+    </tbody>
+
+  </table>
+  <div>
+    <a class="btn btn-secondary btn-lg" href="tsp" role="button">Return</a>
+  </div>
+</div>
+
+<script th:inline="javascript">
+      /*<![CDATA[*/
+        var listCities = /*[[${cities}]]*/;
+        var cityLon = listCities[0].longitude;
+        console.log(cityLon);
+        console.log("Hi");
+      /*]]>*/
+
+      </script>
+
+<script src="" th:src="@{js/myjs.js}"></script>
+
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdltb-NrGR9jpn0hqnCnAS3xck6L4Z0jo&callback=initMap&v=weekly"
+        defer
+></script>
+
+<script src="" th:src="@{js/mapjs.js}"></script>
+<script src="" th:src="@{js/bootstrap.min.js}"></script>
+</body>
+</html>

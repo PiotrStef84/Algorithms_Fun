@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8">
+    <title>Bin Packing Problem</title>
+    <link rel="stylesheet" href="" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" href="" th:href="@{/css/mystyle.css}">
+  </head>
+  <body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Algorithms 0.2 </span>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Bin Packing Problem</h1>
+    <p>This problem can be described as challenge of packing a finite number of items of varying sizes
+      into the unlimited number of fixed sized, equal capacity containers. Main goal is to find the minimal
+      number of needed containers. While the optimal number of containers can be calculated by adding the
+      size of all items that need to be packed and dividing it by the container capacity rounding up the result,
+      achieving this number is not always possible.</p>
+
+    <p>Just like other challenges bin packing problem can be solved in many ways</p>
+    <p>What technique do you want to use to solve the problem? </p>
+
+    <a class="btn btn-primary btn-lg" href="FirstFit" role="button">First Fit</a>
+    <a class="btn btn-secondary btn-lg" href="BestFit" role="button">Best Fit</a>
+
+  </div>
+  <br>
+  <div class="container">
+    <a class="btn btn-primary btn-lg" href="index" role="button">Return</a>
+  </div>
+
+
+  <script src="" th:src="@{js/myjs.js}"></script>
+  <script src="" th:src="@{js/bootstrap.min.js}"></script>
+  </body>
+</html>
